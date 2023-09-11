@@ -1,5 +1,5 @@
 function start() {
-    var endTime, msLeft, time, func, randomNumber;
+    var endTime, msLeft, time, func, randomNumber, randomNumber_index;
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
     let currentIndex = numbers.length,  randomIndex;
     let objects = [
@@ -62,15 +62,19 @@ function start() {
         if (Number(document.querySelector("input").value) == randomNumber) {
             document.querySelector("h4").innerHTML = "Correct!";
             document.querySelector("h4").style.color = "green";
-            document.querySelector("h5").innerHTML = "You won! Refresh the page to start again or go to <a href=\"index.html\">home page</a>.";
+            document.querySelector("h5").innerHTML = "You won! <a href=\"play.html\">Refresh the page</a> to start again or go to <a href=\"index.html\">home page</a>.";
         }
         else {
             document.querySelector("h4").innerHTML = "Incorrect.";
             document.querySelector("h4").style.color = "red";
-            document.querySelector("h5").innerHTML = "You lose. Refresh the page to start again or go to <a href=\"index.html\">home page</a>.";
+            document.querySelector("h5").innerHTML = "You lose. <a href=\"play.html\">Refresh the page</a> to start again or go to <a href=\"index.html\">home page</a>.";
         }
         document.querySelector("#inp").remove()
         document.querySelector("#submit-button").remove()
+        objects[randomNumber_index].style.color = "blue";
+        for (let i = 0; i < 18; i++) {
+            objects[i].innerHTML = numbers[i];
+        }
     }
 
     function hide() {
@@ -85,9 +89,9 @@ function start() {
 
     function getAnswer() {
         document.querySelector("h4").innerHTML = "Enter the answer. Refresh to start again.";
-        randomNumber = Math.floor(Math.random()*18);
+        randomNumber_index = Math.floor(Math.random()*18);
         for (let i = 0; i < 18; i++) {
-            if (i == randomNumber){
+            if (i == randomNumber_index){
                 objects[i].innerHTML = "X";
             }
             else
@@ -95,7 +99,7 @@ function start() {
                 objects[i].innerHTML = "O";
             }
         }
-        randomNumber = numbers[randomNumber];
+        randomNumber = numbers[randomNumber_index];
         document.querySelector("#timer").remove();
         document.querySelector("#form-container").appendChild(document.createElement("form"));
         document.querySelector("form").appendChild(document.createElement("input"));

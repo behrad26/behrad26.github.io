@@ -1,11 +1,4 @@
-html {
-    height: 100%;
-    width: 100%;
-}
-
 body {
-    height: 100%;
-    width: 100%;
     color: white;
     text-align: center;
     align-items: center;
@@ -20,16 +13,6 @@ body {
     border-radius: 13px;
     background-color: white;
     color: black;
-}
-
-.icons {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, rgba(46, 202, 127) 0%, rgba(45, 195, 165, 0.1) 100%);
-    border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 button {
