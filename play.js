@@ -64,10 +64,14 @@ function start() {
     function check(event) {
         event.preventDefault();
         if (Number(document.querySelector("input").value) == randomNumber) {
-            alert("Hooooo!!!!");
+            document.querySelector("h4").innerHTML = "Correct!";
+            document.querySelector("h4").style.color = "green";
+            document.querySelector("h5").innerHTML = "You won! Refresh the page to start again or go to <a href=\"index.html\">home page</a>.";
         }
         else {
-            alert("Noooooo...");
+            document.querySelector("h4").innerHTML = "Incorrect.";
+            document.querySelector("h4").style.color = "red";
+            document.querySelector("h5").innerHTML = "You lose. Refresh the page to start again or go to <a href=\"index.html\">home page</a>.";
         }
         document.querySelector("#inp").remove()
         document.querySelector("#submit-button").remove()

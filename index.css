@@ -44,3 +44,19 @@ body {
 .more {
     text-align: center;
 }
+
+button {
+    margin: 1%;
+    margin-bottom: 0%;
+    padding: 0.5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #dddddd;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+}
