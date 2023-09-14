@@ -8,23 +8,28 @@ body {
 
 .container {
     width: 80%;
-    padding: 4%;
-    padding-bottom: 2%;
+    padding: 3%;
     border-radius: 13px;
     background-color: white;
     color: black;
 }
 
-td {
-    background-color: #f0f0fc;
-    color: black;
+.question {
+    color: #5193e8;
+    text-align: left;
 }
 
-.table {
-    border: 2px solid black;
+.answer {
+    margin-left: 2%;
+    text-align: left;
+    margin-bottom: 4%;
 }
 
-button, input {
+.more {
+    text-align: center;
+}
+
+button {
     margin: 1%;
     margin-bottom: 0%;
     padding: 0.5%;
